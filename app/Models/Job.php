@@ -16,7 +16,7 @@ class Job extends Model
     /** @use HasFactory<\Database\Factories\JobFactory> */
     use HasFactory, softDeletes;
 
-    protected $fillable = ['title', 'description', 'salary', 'location', 'category', 'experience'];
+    protected $fillable = ['title', 'description', 'salary', 'location', 'category', 'experience', 'employer_id'];
 
     public static array $experience = ['entry', 'intermediate', 'senior'];
     public static array $category = ['IT', 'Finance', 'Sales', 'Marketing'];

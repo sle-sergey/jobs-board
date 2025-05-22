@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 Route::get('', fn() => to_route('jobs.index'));
 
 Route::resource('jobs', JobController::class)
-    ->only(['index', 'show']);
+    ->only(['index', 'show', 'edit']);
 
 Route::get('login', fn() => to_route('auth.create'))->name('login');
 

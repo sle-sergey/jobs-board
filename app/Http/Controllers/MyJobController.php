@@ -22,7 +22,7 @@ class MyJobController extends Controller
             'jobs' =>auth()->user()->employer
             ->jobs()
             ->with(['employer', 'jobApplications', 'jobApplications.user'])
-                ->withTrashed()
+//                ->withTrashed()  //show in "my jobs" with soft deleted
             ->get()
         ]);
 

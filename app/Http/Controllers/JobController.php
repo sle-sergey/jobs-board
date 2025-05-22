@@ -29,5 +29,10 @@ class JobController extends Controller
         $this->authorize('view', $job);
         return view('job.show',  ['job' => $job->load('employer.jobs')]);
     }
+    public function edit(Job $myJob)
+    {
+        $this->authorize('update', $myJob);
+        return view('my-job.edit', ['job' => $myJob]);
+    }
 
 }

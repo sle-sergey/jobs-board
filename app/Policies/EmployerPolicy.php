@@ -13,7 +13,7 @@ class EmployerPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,7 +29,8 @@ class EmployerPolicy
      */
     public function create(User $user): bool
     {
-        return null == $user->employer;
+        return true;
+//        return null == $user->employer;
     }
 
     /**
@@ -37,7 +38,8 @@ class EmployerPolicy
      */
     public function update(User $user, Employer $employer): bool
     {
-        return $employer->user_id == $user->id;
+        return true;
+//        return $employer->user_id == $user->id;
     }
 
     /**
@@ -45,7 +47,7 @@ class EmployerPolicy
      */
     public function delete(User $user, Employer $employer): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -61,6 +63,6 @@ class EmployerPolicy
      */
     public function forceDelete(User $user, Employer $employer): bool
     {
-        return false;
+        return true;
     }
 }

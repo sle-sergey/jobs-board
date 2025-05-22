@@ -8,7 +8,7 @@
 
 </head>
 <body
-    class="from-10% via-30% to-90% mx-auto mt-10 max-w-5xl bg-linear-to-r/oklch from-indigo-100 to-teal-100 text-shadow-slate-100">
+        class="from-10% via-30% to-90% mx-auto mt-10 max-w-5xl bg-linear-to-r/oklch from-indigo-100 to-teal-100 text-shadow-slate-100">
 <nav class="mb-8 flex justify-between text-lg font-medium">
     <ul class="flex space-x-2">
         <li>
@@ -22,9 +22,9 @@
                     {{ auth()->user()->name ?? 'Guest' }}: Applications
                 </a>
             </li>
-        <li>
-            <a href="{{route('my-jobs.index')}}">My Job</a>
-        </li>
+            <li>
+                <a href="{{route('my-jobs.index')}}">My Job</a>
+            </li>
             <li>
                 <form action="{{route('auth.destroy')}}" method="post">
                     @csrf
